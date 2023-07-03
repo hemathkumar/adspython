@@ -1,0 +1,31 @@
+import random
+
+def roll_dice():
+    min_value = 1
+    max_value = 6
+    
+    while True:
+        # Generate a random number between 1 and 6
+        dice_number = random.randint(min_value, max_value)
+        print("You rolled:", dice_number)
+        
+        # Ask the user if they want to roll the dice again
+        roll_again = input("Do you want to roll the dice again? (yes/no): ")
+        
+        # Check if the user wants to roll again
+        if roll_again.lower() == "yes" or roll_again.lower() == "y":
+            continue  # Continue to the next iteration of the loop
+        else:
+            break  # Exit the loop
+
+print("Welcome to the Roll the Dice game!")
+roll_dice()
+-----------------output-----------
+Welcome to the Roll the Dice game!
+You rolled: 4
+Do you want to roll the dice again? (yes/no): yes
+You rolled: 3
+Do you want to roll the dice again? (yes/no): yes
+You rolled: 4
+Do you want to roll the dice again? (yes/no): yes
+You rolled: 6
